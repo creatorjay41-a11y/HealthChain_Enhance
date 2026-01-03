@@ -43,13 +43,13 @@ export default function Hero({ scrollY }: HeroProps) {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <button
-            onClick={() => window.location.href = 'https://www.jotform.com/app/253583637449470'}
+            onClick={() => window.open('https://www.jotform.com/app/253583637449470', '_blank')}
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full font-semibold shadow-2xl shadow-blue-300/50 hover:shadow-blue-400/60 transition-all duration-300 hover:scale-105 flex items-center space-x-2">
             <Zap className="w-5 h-5" />
             <span>Try B-Max AI</span>
           </button>
           <button
-            onClick={() => window.location.href = 'https://devjay-healthcare.netlify.app/history'}
+            onClick={() => window.open('https://devjay-healthcare.netlify.app/history', '_blank')}
             className="px-8 py-4 bg-white/60 backdrop-blur-xl text-slate-700 rounded-full font-semibold border border-white/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             View Health History
           </button>
