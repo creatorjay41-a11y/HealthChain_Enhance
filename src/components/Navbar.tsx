@@ -46,7 +46,9 @@ export default function Navbar({ scrollY }: NavbarProps) {
             <a href="#about" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
               About
             </a>
-            <button className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full font-medium shadow-lg shadow-blue-300/50 hover:shadow-xl hover:shadow-blue-400/60 transition-all duration-300 hover:scale-105">
+            <button
+              onClick={() => window.location.href = 'https://www.jotform.com/app/253583637449470'}
+              className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full font-medium shadow-lg shadow-blue-300/50 hover:shadow-xl hover:shadow-blue-400/60 transition-all duration-300 hover:scale-105">
               Get Started
             </button>
           </div>
