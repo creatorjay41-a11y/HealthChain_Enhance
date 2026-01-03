@@ -80,20 +80,26 @@ export default function Features({ scrollY }: FeaturesProps) {
             const cardTranslateY = Math.max(50 - (scrollY - scrollOffset) / 5, 0);
 
             const isSpecialCard = feature.isSpecial;
+            const isEmergencyCard = feature.title === 'Health Emergency';
+            const isBmaxCard = feature.title === 'B-Max AI';
 
             return (
               <div
                 key={feature.title}
                 className={`group backdrop-blur-xl rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer ${
-                  isSpecialCard
-                    ? 'bg-gradient-to-br from-red-300/20 via-blue-300/20 to-purple-300/20 border border-red-200/40 shadow-2xl shadow-blue-200/30'
+                  isEmergencyCard
+                    ? 'bg-gradient-to-br from-red-400/25 via-red-300/20 to-rose-300/20 border border-red-200/50 shadow-2xl shadow-red-400/30'
+                    : isBmaxCard
+                    ? 'bg-gradient-to-br from-violet-300/25 via-blue-300/20 to-purple-300/20 border border-violet-200/40 shadow-2xl shadow-blue-200/30'
                     : 'bg-white/50 border border-white/60'
                 }`}
                 style={{
                   opacity: cardOpacity,
                   transform: `translateY(${cardTranslateY}px)`,
-                  boxShadow: isSpecialCard
-                    ? '0 8px 32px 0 rgba(148, 113, 255, 0.15), inset 0 1px 2px 0 rgba(255, 200, 200, 0.3), inset 0 -1px 2px 0 rgba(100, 200, 255, 0.3)'
+                  boxShadow: isEmergencyCard
+                    ? '0 8px 32px 0 rgba(239, 68, 68, 0.2), inset 0 1px 2px 0 rgba(255, 150, 150, 0.4), inset 0 -1px 2px 0 rgba(255, 200, 200, 0.3)'
+                    : isBmaxCard
+                    ? '0 8px 32px 0 rgba(148, 113, 255, 0.15), inset 0 1px 2px 0 rgba(255, 200, 200, 0.2), inset 0 -1px 2px 0 rgba(100, 200, 255, 0.3)'
                     : '0 8px 32px 0 rgba(31, 38, 135, 0.15), inset 0 1px 2px 0 rgba(255, 255, 255, 0.8)',
                 }}
               >
