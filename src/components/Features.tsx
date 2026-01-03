@@ -14,6 +14,7 @@ export default function Features({ scrollY }: FeaturesProps) {
       shadowColor: 'shadow-red-300/50',
       badge: 'Emergency',
       badgeColor: 'bg-red-100 text-red-600',
+      href: 'https://devjay-healthcare.netlify.app/first-aid',
     },
     {
       icon: BarChart3,
@@ -23,6 +24,7 @@ export default function Features({ scrollY }: FeaturesProps) {
       shadowColor: 'shadow-orange-300/50',
       badge: 'AI Insights',
       badgeColor: 'bg-orange-100 text-orange-600',
+      href: '#',
     },
     {
       icon: FileText,
@@ -32,6 +34,7 @@ export default function Features({ scrollY }: FeaturesProps) {
       shadowColor: 'shadow-emerald-300/50',
       badge: 'Secure & Private',
       badgeColor: 'bg-emerald-100 text-emerald-600',
+      href: 'https://devjay-healthcare.netlify.app/history',
     },
     {
       icon: Activity,
@@ -41,6 +44,7 @@ export default function Features({ scrollY }: FeaturesProps) {
       shadowColor: 'shadow-blue-300/50',
       badge: 'Live IoT Data',
       badgeColor: 'bg-blue-100 text-blue-600',
+      href: 'https://devjay-healthcare.netlify.app/monitoring',
     },
   ];
 
