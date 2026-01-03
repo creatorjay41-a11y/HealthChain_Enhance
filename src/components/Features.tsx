@@ -66,7 +66,7 @@ export default function Features({ scrollY }: FeaturesProps) {
             Comprehensive Health Solutions
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
-            Four powerful tools to transform your healthcare experience and keep you in control
+            Five powerful tools to transform your healthcare experience and keep you in control
           </p>
         </div>
 
