@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "dist"
+
+[[redirects]]
+  from = "/first-aid"
+  to = "https://www.jotform.com/app/253583637449470"
+  status = 301
+
+[[redirects]]
+  from = "/monitoring"
+  to = "https://www.jotform.com/app/253583637449470"
+  status = 301
+
+[[redirects]]
+  from = "/history"
+  to = "https://www.jotform.com/app/253583637449470"
+  status = 301
