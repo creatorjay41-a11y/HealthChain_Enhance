@@ -46,7 +46,7 @@ export default function Features({ scrollY }: FeaturesProps) {
       shadowColor: 'shadow-emerald-300/50',
       badge: 'Secure & Private',
       badgeColor: 'bg-emerald-100 text-emerald-600',
-      href: '/history.html',
+      href: '/history',
     },
     {
       icon: Activity,
@@ -56,7 +56,7 @@ export default function Features({ scrollY }: FeaturesProps) {
       shadowColor: 'shadow-blue-300/50',
       badge: 'Live IoT Data',
       badgeColor: 'bg-blue-100 text-blue-600',
-      href: '/monitoring.html',
+      href: '/monitoring',
     },
   ];
 
