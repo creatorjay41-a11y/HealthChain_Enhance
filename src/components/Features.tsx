@@ -79,14 +79,22 @@ export default function Features({ scrollY }: FeaturesProps) {
             const cardOpacity = Math.min(Math.max((scrollY - scrollOffset) / 200 + 1, 0), 1);
             const cardTranslateY = Math.max(50 - (scrollY - scrollOffset) / 5, 0);
 
+            const isSpecialCard = feature.isSpecial;
+
             return (
               <div
                 key={feature.title}
-                className="group backdrop-blur-xl bg-white/50 border border-white/60 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer"
+                className={`group backdrop-blur-xl rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer ${
+                  isSpecialCard
+                    ? 'bg-gradient-to-br from-red-300/20 via-blue-300/20 to-purple-300/20 border border-red-200/40 shadow-2xl shadow-blue-200/30'
+                    : 'bg-white/50 border border-white/60'
+                }`}
                 style={{
                   opacity: cardOpacity,
                   transform: `translateY(${cardTranslateY}px)`,
-                  boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15), inset 0 1px 2px 0 rgba(255, 255, 255, 0.8)',
+                  boxShadow: isSpecialCard
+                    ? '0 8px 32px 0 rgba(148, 113, 255, 0.15), inset 0 1px 2px 0 rgba(255, 200, 200, 0.3), inset 0 -1px 2px 0 rgba(100, 200, 255, 0.3)'
+                    : '0 8px 32px 0 rgba(31, 38, 135, 0.15), inset 0 1px 2px 0 rgba(255, 255, 255, 0.8)',
                 }}
               >
                 <div className="flex items-start justify-between mb-4">
