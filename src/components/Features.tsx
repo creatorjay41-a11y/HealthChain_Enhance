@@ -106,7 +106,7 @@ export default function Features({ scrollY }: FeaturesProps) {
                 </p>
 
                 <button
-                  onClick={() => feature.href !== '#' && (window.location.href = feature.href)}
+                  onClick={() => feature.href !== '#' && window.open(feature.href, '_blank')}
                   className="flex items-center space-x-2 text-blue-600 font-semibold group-hover:space-x-3 transition-all duration-300"
                 >
                   <span>Learn more</span>
