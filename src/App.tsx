@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Footer from './components/Footer';
+import BackButton from './components/BackButton';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
