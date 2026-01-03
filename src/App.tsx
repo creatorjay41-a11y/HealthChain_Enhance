@@ -23,6 +23,7 @@ function App() {
       <Hero scrollY={scrollY} />
       <Features scrollY={scrollY} />
       <Footer />
+      <BackButton />
     </div>
   );
 }
