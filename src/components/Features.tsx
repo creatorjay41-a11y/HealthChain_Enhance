@@ -95,7 +95,10 @@ export default function Features({ scrollY }: FeaturesProps) {
                   {feature.description}
                 </p>
 
-                <button className="flex items-center space-x-2 text-blue-600 font-semibold group-hover:space-x-3 transition-all duration-300">
+                <button
+                  onClick={() => feature.href !== '#' && (window.location.href = feature.href)}
+                  className="flex items-center space-x-2 text-blue-600 font-semibold group-hover:space-x-3 transition-all duration-300"
+                >
                   <span>Learn more</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
