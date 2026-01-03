@@ -25,7 +25,7 @@ export default function Features({ scrollY }: FeaturesProps) {
       shadowColor: 'shadow-red-300/50',
       badge: 'Emergency',
       badgeColor: 'bg-red-100 text-red-600',
-      href: '/first-aid.html',
+      href: '/first-aid',
       isSpecial: true,
     },
     {
