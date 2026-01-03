@@ -49,7 +49,7 @@ export default function Hero({ scrollY }: HeroProps) {
             <span>Try B-Max AI</span>
           </button>
           <button
-            onClick={() => window.location.replace('/history.html')}
+            onClick={() => window.location.replace('/history')}
             className="px-8 py-4 bg-white/60 backdrop-blur-xl text-slate-700 rounded-full font-semibold border border-white/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             View Health History
           </button>
