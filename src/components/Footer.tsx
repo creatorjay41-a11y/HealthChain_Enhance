@@ -28,7 +28,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <button
-                    onClick={() => window.location.replace('/first-aid.html')}
+                    onClick={() => window.location.replace('/first-aid')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Emergency
                   </button>
@@ -42,14 +42,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <button
-                    onClick={() => window.location.replace('/history.html')}
+                    onClick={() => window.location.replace('/history')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Records
                   </button>
                 </li>
                 <li>
                   <button
-                    onClick={() => window.location.replace('/monitoring.html')}
+                    onClick={() => window.location.replace('/monitoring')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Real-Time Monitoring
                   </button>
