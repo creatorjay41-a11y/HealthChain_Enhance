@@ -28,7 +28,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <button
-                    onClick={() => window.location.replace('https://devjay-healthcare.netlify.app/first-aid')}
+                    onClick={() => window.location.replace('/first-aid.html')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Emergency
                   </button>
@@ -42,14 +42,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <button
-                    onClick={() => window.location.replace('https://devjay-healthcare.netlify.app/history')}
+                    onClick={() => window.location.replace('/history.html')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Records
                   </button>
                 </li>
                 <li>
                   <button
-                    onClick={() => window.location.replace('https://devjay-healthcare.netlify.app/monitoring')}
+                    onClick={() => window.location.replace('/monitoring.html')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Real-Time Monitoring
                   </button>
