@@ -28,28 +28,28 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <button
-                    onClick={() => window.location.href = 'https://devjay-healthcare.netlify.app/first-aid'}
+                    onClick={() => window.open('https://devjay-healthcare.netlify.app/first-aid', '_blank')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Emergency
                   </button>
                 </li>
                 <li>
                   <button
-                    onClick={() => window.location.href = 'https://www.jotform.com/app/253583637449470'}
+                    onClick={() => window.open('https://www.jotform.com/app/253583637449470', '_blank')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Analytics
                   </button>
                 </li>
                 <li>
                   <button
-                    onClick={() => window.location.href = 'https://devjay-healthcare.netlify.app/history'}
+                    onClick={() => window.open('https://devjay-healthcare.netlify.app/history', '_blank')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Records
                   </button>
                 </li>
                 <li>
                   <button
-                    onClick={() => window.location.href = 'https://devjay-healthcare.netlify.app/monitoring'}
+                    onClick={() => window.open('https://devjay-healthcare.netlify.app/monitoring', '_blank')}
                     className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Real-Time Monitoring
                   </button>
