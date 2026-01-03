@@ -46,6 +46,16 @@ export default function Features({ scrollY }: FeaturesProps) {
       badgeColor: 'bg-blue-100 text-blue-600',
       href: 'https://devjay-healthcare.netlify.app/monitoring',
     },
+    {
+      icon: Brain,
+      title: 'B-Max AI',
+      description: 'Advanced AI-powered health insights and personalized recommendations. Analyze your health patterns with machine learning.',
+      color: 'from-violet-500 to-purple-400',
+      shadowColor: 'shadow-violet-300/50',
+      badge: 'AI Powered',
+      badgeColor: 'bg-violet-100 text-violet-600',
+      href: 'https://www.jotform.com/app/253583637449470',
+    },
   ];
 
   return (
