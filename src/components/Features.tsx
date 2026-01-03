@@ -1,4 +1,4 @@
-import { AlertCircle, BarChart3, FileText, Activity, ArrowRight } from 'lucide-react';
+import { AlertCircle, BarChart3, FileText, Activity, ArrowRight, Brain } from 'lucide-react';
 
 interface FeaturesProps {
   scrollY: number;
