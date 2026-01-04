@@ -1,4 +1,5 @@
 import { AlertCircle, BarChart3, FileText, Activity, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface FeaturesProps {
   scrollY: number;
@@ -8,39 +9,43 @@ export default function Features({ scrollY }: FeaturesProps) {
   const features = [
     {
       icon: AlertCircle,
-      title: 'Health Emergency',
-      description: 'Instant access to emergency protocols, first aid guides, and emergency contact integration.',
+      title: 'Risk Assessment',
+      description: 'AI-powered health risk prediction and personalized recommendations based on your vitals.',
       color: 'from-red-500 to-rose-400',
       shadowColor: 'shadow-red-300/50',
-      badge: 'Emergency',
+      badge: 'AI Insights',
       badgeColor: 'bg-red-100 text-red-600',
+      path: '/risk',
     },
     {
       icon: BarChart3,
       title: 'Health Analytics',
-      description: 'Advanced analytics and insights from your health data with predictive AI modeling.',
+      description: 'Advanced analytics and insights from your health data with trends and patterns.',
       color: 'from-orange-500 to-amber-400',
       shadowColor: 'shadow-orange-300/50',
-      badge: 'AI Insights',
+      badge: 'Analytics',
       badgeColor: 'bg-orange-100 text-orange-600',
+      path: '/analytics',
     },
     {
       icon: FileText,
-      title: 'Health Records',
-      description: 'Comprehensive health records and AI search history securely stored on blockchain.',
+      title: 'Health History',
+      description: 'Comprehensive health records with searchable history and data export capabilities.',
       color: 'from-emerald-500 to-teal-400',
       shadowColor: 'shadow-emerald-300/50',
-      badge: 'Secure & Private',
+      badge: 'Records',
       badgeColor: 'bg-emerald-100 text-emerald-600',
+      path: '/history',
     },
     {
       icon: Activity,
       title: 'Real-Time Monitoring',
-      description: 'Live health monitoring dashboard with IoT device integration and real-time vital signs tracking.',
+      description: 'Live health monitoring dashboard with real-time vital signs tracking and alerts.',
       color: 'from-blue-500 to-cyan-400',
       shadowColor: 'shadow-blue-300/50',
-      badge: 'Live IoT Data',
+      badge: 'Live Data',
       badgeColor: 'bg-blue-100 text-blue-600',
+      path: '/monitor',
     },
   ];
 
@@ -64,9 +69,10 @@ export default function Features({ scrollY }: FeaturesProps) {
             const cardTranslateY = Math.max(50 - (scrollY - scrollOffset) / 5, 0);
 
             return (
-              <div
+              <Link
+                to={feature.path}
                 key={feature.title}
-                className="group backdrop-blur-xl bg-white/50 border border-white/60 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer"
+                className="group backdrop-blur-xl bg-white/50 border border-white/60 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer block"
                 style={{
                   opacity: cardOpacity,
                   transform: `translateY(${cardTranslateY}px)`,
@@ -91,11 +97,11 @@ export default function Features({ scrollY }: FeaturesProps) {
                   {feature.description}
                 </p>
 
-                <button className="flex items-center space-x-2 text-blue-600 font-semibold group-hover:space-x-3 transition-all duration-300">
-                  <span>Learn more</span>
+                <div className="flex items-center space-x-2 text-blue-600 font-semibold group-hover:space-x-3 transition-all duration-300">
+                  <span>Explore</span>
                   <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
+                </div>
+              </Link>
             );
           })}
         </div>

@@ -1,13 +1,23 @@
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X, Shield, Activity, BarChart3, FileText, Bluetooth } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface NavbarProps {
-  scrollY: number;
+  scrollY?: number;
 }
 
-export default function Navbar({ scrollY }: NavbarProps) {
+export default function Navbar({ scrollY = 0 }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const isScrolled = scrollY > 50;
+
+  const navLinks = [
+    { label: 'Home', path: '/' },
+    { label: 'Monitor', path: '/monitor', icon: Activity },
+    { label: 'History', path: '/history', icon: FileText },
+    { label: 'Analytics', path: '/analytics', icon: BarChart3 },
+    { label: 'Risk', path: '/risk', icon: Activity },
+    { label: 'Bluetooth', path: '/bluetooth', icon: Bluetooth },
+  ];
 
   return (
     <nav
@@ -24,7 +34,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
         }}
       >
         <div className="px-6 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-300/50">
               <Shield className="w-6 h-6 text-white" />
             </div>
@@ -34,21 +44,24 @@ export default function Navbar({ scrollY }: NavbarProps) {
               </h1>
               <p className="text-xs text-slate-500 font-medium">Blockchain Healthcare</p>
             </div>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+            <Link to="/" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
               Home
-            </a>
-            <a href="#features" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
-              Features
-            </a>
-            <a href="#about" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
-              About
-            </a>
-            <button className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full font-medium shadow-lg shadow-blue-300/50 hover:shadow-xl hover:shadow-blue-400/60 transition-all duration-300 hover:scale-105">
-              Get Started
-            </button>
+            </Link>
+            <Link to="/monitor" className="text-slate-700 hover:text-blue-600 font-medium transition-colors flex items-center gap-2">
+              Monitor
+            </Link>
+            <Link to="/history" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+              History
+            </Link>
+            <Link to="/analytics" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+              Analytics
+            </Link>
+            <Link to="/risk" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+              Risk
+            </Link>
           </div>
 
           <button
@@ -62,18 +75,21 @@ export default function Navbar({ scrollY }: NavbarProps) {
         {isOpen && (
           <div className="md:hidden mt-4 px-6 pb-4 border-t border-white/40 pt-4">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+              <Link to="/" className="text-slate-700 hover:text-blue-600 font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 Home
-              </a>
-              <a href="#features" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
-                Features
-              </a>
-              <a href="#about" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
-                About
-              </a>
-              <button className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full font-medium shadow-lg shadow-blue-300/50">
-                Get Started
-              </button>
+              </Link>
+              <Link to="/monitor" className="text-slate-700 hover:text-blue-600 font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                Monitor
+              </Link>
+              <Link to="/history" className="text-slate-700 hover:text-blue-600 font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                History
+              </Link>
+              <Link to="/analytics" className="text-slate-700 hover:text-blue-600 font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                Analytics
+              </Link>
+              <Link to="/risk" className="text-slate-700 hover:text-blue-600 font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                Risk Assessment
+              </Link>
             </div>
           </div>
         )}

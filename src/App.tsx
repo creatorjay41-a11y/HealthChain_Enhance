@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Footer from './components/Footer';
+import RealTimeMonitoring from './pages/RealTimeMonitoring';
+import HealthHistory from './pages/HealthHistory';
+import HealthAnalytics from './pages/HealthAnalytics';
+import HealthRiskPrediction from './pages/HealthRiskPrediction';
+import BluetoothHealthMonitor from './pages/BluetoothHealthMonitor';
 
-function App() {
+function HomePage() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -23,6 +29,21 @@ function App() {
       <Features scrollY={scrollY} />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/monitor" element={<RealTimeMonitoring />} />
+        <Route path="/history" element={<HealthHistory />} />
+        <Route path="/analytics" element={<HealthAnalytics />} />
+        <Route path="/risk" element={<HealthRiskPrediction />} />
+        <Route path="/bluetooth" element={<BluetoothHealthMonitor />} />
+      </Routes>
+    </Router>
   );
 }
 
