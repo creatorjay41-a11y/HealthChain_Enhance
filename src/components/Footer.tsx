@@ -27,24 +27,32 @@ export default function Footer() {
               <h4 className="text-lg font-bold text-slate-800 mb-4">Quick Access</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors text-sm">
+                  <button
+                    onClick={() => window.location.replace('/first-aid')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Emergency
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors text-sm">
+                  <button
+                    onClick={() => window.location.replace('https://www.jotform.com/app/253583637449470')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Analytics
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors text-sm">
+                  <button
+                    onClick={() => window.location.replace('/history')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Health Records
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors text-sm">
+                  <button
+                    onClick={() => window.location.replace('/monitoring')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors text-sm cursor-pointer">
                     Real-Time Monitoring
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
