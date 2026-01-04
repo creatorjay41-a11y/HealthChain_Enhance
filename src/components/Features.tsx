@@ -58,6 +58,16 @@ export default function Features({ scrollY }: FeaturesProps) {
       badgeColor: 'bg-blue-100 text-blue-600',
       href: '/monitoring',
     },
+    {
+      icon: Brain,
+      title: 'Risk Prediction',
+      description: 'AI-powered health risk prediction with machine learning analysis and personalized prevention strategies.',
+      color: 'from-indigo-500 to-purple-400',
+      shadowColor: 'shadow-indigo-300/50',
+      badge: 'ML Powered',
+      badgeColor: 'bg-indigo-100 text-indigo-600',
+      href: '/risk-prediction',
+    },
   ];
 
   return (
