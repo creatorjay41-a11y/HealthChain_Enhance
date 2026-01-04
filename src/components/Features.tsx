@@ -36,7 +36,7 @@ export default function Features({ scrollY }: FeaturesProps) {
       shadowColor: 'shadow-orange-300/50',
       badge: 'AI Insights',
       badgeColor: 'bg-orange-100 text-orange-600',
-      href: '#',
+      href: '/analytics',
     },
     {
       icon: FileText,
