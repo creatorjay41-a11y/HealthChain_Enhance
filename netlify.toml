@@ -3,6 +3,16 @@
   functions = "netlify/functions"
   publish = "dist"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+    X-Served-By = "netlify"
+
 [[redirects]]
   from = "/first-aid"
   to = "https://www.jotform.com/app/253583637449470"
